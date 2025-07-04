@@ -6,9 +6,9 @@ const options = {
 	definition: {
 		openapi: '3.0.0',
 		info: {
-			title: 'My API',
+			title: 'PetMatch API',
 			version: '1.0.0',
-			description: 'API Documentation using swagger-jsdoc',
+			description: 'API documentation for PetMatch project',
 		},
 		servers: [
 			{
@@ -81,7 +81,7 @@ const options = {
 			},
 		},
 	},
-	apis: ['./routes/*.js', './index.js'], // paths to files containing OpenAPI definitions
+	apis: ['./routes/*.js', './server.js'], // paths to files containing OpenAPI definitions
 };
 
 const specs = swaggerJSDoc(options);
