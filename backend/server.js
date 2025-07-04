@@ -41,6 +41,11 @@ app.get('/', (req, res) => {
 	res.json({ message: 'API is running' });
 });
 
+// IMPORTANT: Add this BEFORE the swagger-ui middleware for it to generate markdown documentation
+app.get('/api-docs/swagger.json', (req, res) => {
+	res.json(specs);
+});
+
 // Swagger Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs, {
 	explorer: true,
