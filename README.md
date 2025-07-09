@@ -36,6 +36,9 @@ This application helps users browse adoptable pets and shelters with a user-frie
 ## Technical documentation
 
 - [Git workflow](doc/git_workflow.md)
+- [Frontend](./frontend/)
+- [Project Structure](doc/projectStructure.md)
+- [Authentication Proposal](doc/auth_proposal.md)
 
 ## Project Progress
 
