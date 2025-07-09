@@ -4,10 +4,8 @@
 
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
-<<<<<<< HEAD
-=======
 - [Team Members](#team-members)
->>>>>>> 5a584ed (Added team members section)
+- [Technical Documentation](#technical-documentation)
 - [Project Progress](#project-progress)
 
 ## Introduction
@@ -17,8 +15,6 @@ This is a project for the 2025 Summer Hackathon hosted by [freeCodeCamp](https:/
 ## Project Overview
 
 This application helps users browse adoptable pets and shelters with a user-friendly interface. The project includes frontend and backend features such user authentication, browsing functionality, and database integration.
-<<<<<<< HEAD
-=======
 
 ## Team Members
 
@@ -32,7 +28,10 @@ This application helps users browse adoptable pets and shelters with a user-frie
 - [BDubDesigns](https://github.com/BDubDesigns)
 - [Aaron Rodriguez](https://github.com/melkyy)
 - [Thomas Pan](https://github.com/thomas1424)
->>>>>>> 5a584ed (Added team members section)
+- [thegreatdunzle](https://github.com/thegreatdunzle)
+- [Jake Johnson](https://github.com/JakeHaverOfCatz)
+- [Jackie](https://github.com/jacqrocha)
+- [kunyoungahhh](https://github.com/kunyoungahhh)
 
 ## Technical documentation
 
