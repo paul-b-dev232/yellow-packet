@@ -1,25 +1,29 @@
 
 
-#pet-filter-heading {
+.pet-filter-heading {
     margin: 0;
     font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
-#pet-filter-container {
-    gap: 10px;
+.pet-filter-container {
+    gap: 5px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     background-color: #a2a9b1;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
+    width: 200px;
     color: black;
 }
 
 label {
-    margin: 10px 0px;
+    margin-top: 10px;
+    margin-bottom: 0;
     display: block;
     display: flex;
     justify-content: flex-start;
