@@ -7,7 +7,7 @@ import PetFilter from "../components/PetFilter";
 import { useState } from "react";
 
 function BrowsePets({ user }) {
-  const [filters, setfilters] = useState({ type: '', shelter: '', age_stage: '', size: '', sex: ''}); // holds the value of each applied filter, for use with PetGrid.
+  const [filters, setfilters] = useState({ type: '', shelter: '', age_stage: '', size: '', sex: '' , favorites: false }); // holds the value of each applied filter, for use with PetGrid.
 
   // Values for testing: Swap these with values from the database
   const types = ["Dog", "Cat"];

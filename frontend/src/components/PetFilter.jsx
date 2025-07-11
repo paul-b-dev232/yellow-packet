@@ -48,15 +48,12 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
         setfilters(newFilters);
     }
 
-    if (types.length < 1 &&
-        shelters.length < 1 &&
-        age_stages.length < 1 &&
-        sizes.length < 1 &&
-        sexes.length < 1
-    ) {
-        return <main className="pet-filter-container">
-                <h2 className="pet-filter-heading"> No Filters Available</h2>
-        </main>
+    const handleFavoritesChange = (e) => {
+        const newFilters = {
+            ...filters,
+            favorites: e.target.checked
+        }
+        setfilters(newFilters);
     }
 
     return ( 
@@ -68,8 +65,8 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                 // shows the dropdown if there is more than one option    
                 types.length > 1 && 
                 <>
-                    <label htmlFor="pet-type">Type:</label>
-                    <select id="pet-type" name="pet-type" onChange={handleTypeChange}>
+                    <label htmlFor="pet-type" className="filter-label ">Type:</label>
+                    <select id="pet-type" name="pet-type" onChange={handleTypeChange} className="filter-select">
                         <option value="">All</option> {/* show an all option that allows users to clear this filter */}
                             {
                                 // show all types available
@@ -84,8 +81,8 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                 // shows the dropdown if there is more than one option    
                 shelters.length > 1 && 
                 <>              
-                    <label htmlFor="pet-shelter">Shelter</label>
-                    <select id="pet-shelter" name="pet-shelter" onChange={handleShelterChange}>
+                    <label htmlFor="pet-shelter" className="filter-label ">Shelter</label>
+                    <select id="pet-shelter" name="pet-shelter" onChange={handleShelterChange} className="filter-select">
                         <option value="">All</option> {/* show an all option that allows users to clear this filter */}
                         {
                             // show all shelters available
@@ -100,8 +97,8 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                 // shows the dropdown if there is more than one option    
                 age_stages.length > 1 && 
                 <>
-                    <label htmlFor="pet-age">Age:</label> 
-                    <select id="pet-age" name="pet-age" onChange={handleAgeStageChange}>
+                    <label htmlFor="pet-age" className="filter-label ">Age:</label> 
+                    <select id="pet-age" name="pet-age" onChange={handleAgeStageChange} className="filter-select">
                         <option value="">All</option> {/* show an all option that allows users to clear this filter */}
                         {
                             // show all age stages available
@@ -116,8 +113,8 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                 // shows the dropdown if there is more than one option    
                 sizes.length > 1 && 
                 <>
-                    <label htmlFor="pet-size">Size:</label>
-                    <select id="pet-size" name="pet-size" onChange={handleSizeChange}>
+                    <label htmlFor="pet-size" className="filter-label ">Size:</label>
+                    <select id="pet-size" name="pet-size" onChange={handleSizeChange} className="filter-select">
                         <option value="">All</option> {/* show an all option that allows users to clear this filter */}
                         {
                             // show all sizes available
@@ -132,8 +129,8 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                 // shows the dropdown if there is more than one option    
                 sexes.length > 1 && 
                 <>
-                    <label htmlFor="pet-sex">Sex:</label>
-                    <select id="pet-sex" name="pet-sex" onChange={handleSexChange}>
+                    <label htmlFor="pet-sex" className="filter-label ">Sex:</label>
+                    <select id="pet-sex" name="pet-sex" onChange={handleSexChange} className="filter-select">
                         <option value="">All</option> {/* show an all option that allows users to clear this filter */}
                         {
                             // show all sexes available
@@ -143,6 +140,23 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
                         }
                     </select>
                 </>}
+
+                {/* Checkbox for favorites*/}
+                <div className="favorites-checkbox">
+                    <label className="filter-checkbox-label" htmlFor="favorites">
+                        Favorites: 
+                        <input
+                        type="checkbox"
+                        id="favorites"
+                        name="favorites"
+                        checked={filters.favorites}
+                        onChange={handleFavoritesChange}
+                        className="filter-checkbox"
+                        />
+                        <span className="custom-checkbox" />
+                    </label>
+                    </div>
+
 
         </main>
     </>
