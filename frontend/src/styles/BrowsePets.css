@@ -112,16 +112,32 @@
   }
 
   .filter-toggle {
+    font-family: Merriweather;
     display: inline-block !important;
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #231A45;
+    padding: 1rem 1rem;
+    background-color: #52566B;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 80%;
     text-align: center;
+    box-shadow: 0 2px 5px#213547;
+  }
+  .filter-toggle:active {
+    font-family: Merriweather;
+    display: inline-block !important;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    background-color: #3f4357;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+    box-shadow: none;
   }
 
   .pet-filter-container {
