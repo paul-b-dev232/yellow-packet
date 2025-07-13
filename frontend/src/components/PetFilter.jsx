@@ -58,7 +58,7 @@ export default function PetFilter({ filters, setfilters, types, shelters, age_st
 
     return ( 
     <>
-        <main className="pet-filter-container">
+        <main>
             <h2 className="pet-filter-heading">Filters</h2>
 
                 {

@@ -1,3 +1,6 @@
+*{
+  overflow-x: hidden;
+}
 #pet-gallery {
     box-sizing: border-box;
     display: flex;
@@ -5,7 +8,7 @@
     width: 90%;
     margin: 5%;
     gap: clamp(1rem, 4vw, 2rem);
-    overflow: hidden;
+    
 }
 
 .pet-filter-heading {
@@ -17,10 +20,14 @@
 }
 
 .pet-filter-container {
-    gap: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: clamp(75px, 15%, 200px);
+    background-color: #a2a9b1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
     padding: 20px;
     background-color: #a2a9b1;
     border-radius: 8px;
@@ -32,7 +39,6 @@
 .filter-label {
     margin-top: 10px;
     margin-bottom: 0;
-    display: block;
     display: flex;
     justify-content: flex-start;
 }
@@ -94,3 +100,44 @@
   left: 3px;
   font-size: 0.8rem;
 }
+
+/* Mobile styles only */
+@media (max-width: 768px) {
+  #pet-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .filter-toggle {
+    display: inline-block !important;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #231A45;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+  }
+
+  .pet-filter-container {
+    display: none;
+    width: 90%;
+  }
+
+  .pet-filter-container.open {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
+
+/* Desktop styles (default) */
+.filter-toggle {
+  display: none; /* Hide toggle button on desktop */
+  /* margin-bottom: 1rem; */
+} 
